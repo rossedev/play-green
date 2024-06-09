@@ -2,29 +2,26 @@
 
 import { darkTheme, lightTheme } from "@/styles/theme";
 import { ITheme } from "@/types/theme";
-import { FC, createContext, useContext, useEffect, useState } from "react";
+import { FC, createContext, useEffect, useState } from "react";
 import { ThemeProvider as StyledThemeProvider } from "styled-components";
 
 type TThemeProvider = {
   children: React.ReactNode;
 };
 
-export const ThemeContext = createContext<any | undefined>(undefined);
+interface ThemeContextProps {
+  theme: ITheme;
+  toggleTheme: () => void;
+}
 
-export const useThemeContext = () => {
-  const context = useContext(ThemeContext);
-
-  if (context === undefined) {
-    throw new Error("Error");
-  }
-  return context;
-};
+export const ThemeContext = createContext<ThemeContextProps | undefined>(
+  undefined
+);
 
 export const ThemeProvider: FC<TThemeProvider> = ({ children }) => {
   const [theme, setTheme] = useState<ITheme>(lightTheme);
 
   useEffect(() => {
-    // TODO: Change to Firebase
     const saveInLocal = localStorage.getItem("theme");
     const savedTheme = saveInLocal ? JSON.parse(saveInLocal) : lightTheme;
     setTheme(savedTheme);
