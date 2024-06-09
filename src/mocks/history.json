@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "cardId": "137",
+    "userId": "2e6WdDRMmCh9eoYqxbrSH9OjKqt2",
+    "like": null
+  },
+  {
+    "id": 2,
+    "cardId": "137",
+    "userId": "2e6WdDRMmCh9eoYqxbrSH9OjKqt2",
+    "like": true
+  },
+  {
+    "id": 3,
+    "cardId": "137",
+    "userId": "2e6WdDRMmCh9eoYqxbrSH9OjKqt2",
+    "like": false
+  }
+]

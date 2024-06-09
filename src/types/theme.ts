@@ -5,5 +5,9 @@ export interface ITheme {
     background: string;
     text: string;
     secondary: string;
+    border: string;
+    bar?: string;
+    currentBackground: string;
+    currentText: string;
   };
 }

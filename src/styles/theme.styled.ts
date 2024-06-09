@@ -7,6 +7,10 @@ export const lightTheme: ITheme = {
     background: "#F3F3F3",
     text: "#161617",
     secondary: "#242425",
+    border: "#24242512",
+    bar: "#FFFFFF",
+    currentBackground: "#F5F5F5",
+    currentText: "#2067F8",
   },
 };
 
@@ -17,6 +21,10 @@ export const darkTheme: ITheme = {
     background: "#181828",
     text: "#FEFEFE",
     secondary: "#d7d5d5",
+    border: "#FFFFFF0F",
+    bar: "#2C2B3E",
+    currentBackground: "#1F1F31",
+    currentText: "#FFFFFF",
   },
 };
 
